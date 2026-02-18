@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Files — Records</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/case-files.css">
+  <noscript><meta http-equiv="refresh" content="0;url=no-js.html"></noscript>
+</head>
+<body class="page-case-files">
+  <div id="site-header-placeholder"></div>
+
+  <div class="case-files-layout">
+    <aside class="case-files-sidebar" aria-label="Case files info">
+      <div class="sidebar-info">
+        <h2 class="sidebar-title" data-i18n="sidebarTitle">Case Files</h2>
+        <p class="sidebar-desc" data-i18n="sidebarDesc">Scroll or click the front folder to cycle. Click a file below and use <strong>Choose</strong> to open.</p>
+      </div>
+      <label for="case-search" class="visually-hidden">Search cases</label>
+      <input type="search" id="case-search" class="sidebar-search" data-i18n="searchPlaceholder" placeholder="Search cases..." autocomplete="off">
+      <ul class="sidebar-file-list" id="sidebar-file-list" role="list"></ul>
+    </aside>
+
+    <main class="case-files-main">
+      <div class="folder-strip-wrap">
+        <div class="folder-strip" role="list" aria-label="Case file folders"></div>
+        <div class="folder-strip-actions" id="folder-strip-actions" hidden>
+          <a href="#" id="choose-case-link" class="choose-btn" data-i18n="chooseBtn">Choose</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/case-data.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/case-files.js"></script>
+</body>
+</html>
