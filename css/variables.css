@@ -1,0 +1,141 @@
+/**
+ * Design tokens — 90s official / government aesthetic
+ * FBI/CIA law enforcement + medical, morgue — sterile feel
+ */
+
+:root {
+  /* Primary palette */
+  --color-white: #ffffff;
+  --color-light-blue: #c2dcff;
+  --color-light-blue-hover: #a8ccf7;
+  --color-text: #000000;
+
+  /* Page background */
+  --color-page-bg: #c2dcff;
+  /* Case files light theme — light blue gradient (like about, not solid) */
+  --color-case-files-bg-light-start: #d4e7ff;
+  --color-case-files-bg-light-end: #b8d4f7;
+
+  /* Header */
+  --header-height: 52px;
+  --header-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --header-shadow-dark: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+  /* Case detail — dark theme */
+  --color-case-detail-bg: #1a1a1a;
+  --color-case-detail-gradient-start: #2e2e2e;
+  --color-case-detail-gradient-end: #1b1b1b;
+  --color-case-detail-text: #ffffff;
+  --color-case-detail-text-muted: #e0e0e0;
+  --color-case-detail-dropdown-bg: #1a1a1a;
+  --color-case-detail-border: rgba(255, 255, 255, 0.15);
+  --color-case-detail-hover: rgba(255, 255, 255, 0.1);
+
+  /* Manila / folder (case files stack + case detail content) */
+  --color-manila-body: #c5a772;
+  --color-manila-tab: #b8956a;
+  --color-manila-dark: #8b5a2b;
+  --color-manila-front: #a68058;
+  --color-manila-front-light: #b89265;
+  --color-manila-front-dark: #95704a;
+  --color-manila-tab-light: #9d6b3d;
+  --color-manila-tab-dark: #6b4423;
+  --color-manila-back-border: #a68058;
+  --color-manila-red: #c91717;
+  --color-stamp: #c91717;
+  --color-stamp-border: #a01010;
+  --color-manila-back-text: #2a1c0f;
+  --color-manila-back-muted: #1b130a;
+  --color-manila-page: #fef8e7;
+  --color-manila-page-back: #fffbe1;
+  --color-manila-controls-bg: #2e2e2e;
+  --color-manila-controls-hover: #555555;
+
+  /* UI — borders, hovers, shadows */
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border-strong: rgba(0, 0, 0, 0.15);
+  --color-border-focus: rgba(0, 0, 0, 0.3);
+  --color-hover-overlay: rgba(0, 0, 0, 0.06);
+  --shadow-sidebar: 2px 0 8px rgba(0, 0, 0, 0.1);
+  --shadow-folder-body: 0 6px 18px rgba(0, 0, 0, 0.22);
+  --shadow-folder-front: 0 12px 32px rgba(0, 0, 0, 0.28);
+  --shadow-folder-tab: 2px 0 6px rgba(0, 0, 0, 0.15);
+  --shadow-content-sheet: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-folder-ref: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-left-front: 0 5px 20px rgba(0, 0, 0, 0.5);
+  --shadow-side: 0 3px 6px rgba(0, 0, 0, 0.25);
+
+  /* Radii */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-folder: 6px;
+  --radius-page: 5px;
+
+  /* A4 dimensions (ISO 216) */
+  --a4-width: 210mm;
+  --a4-height: 297mm;
+  --frame-width: 24px;
+
+  /* Typography */
+  --font-body: "Lexend Deca", sans-serif;
+  --font-nav: "Lexend Deca", sans-serif;
+  --font-mono: "Courier New", monospace;
+  --font-system: "Times New Roman", Times, serif;
+  --nav-font-size: 14px;
+  --nav-font-weight: 700;
+  --text-size-sm: 0.875rem;
+  --text-size-xs: 0.75rem;
+  --text-size-base: 1rem;
+  --text-size-lg: 1.375rem;
+  --line-height-body: 1.4;
+  --line-height-tight: 1.2;
+}
+
+/* Dark theme — main pages (About); case-files/case-detail keep their own dark look */
+[data-theme="dark"] {
+  --color-page-bg: #1a1a1a;
+  --color-text: #e8e8e8;
+  --color-white: #252525;
+  --color-light-blue: #2a2a2e;
+  --color-light-blue-hover: #35353a;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-hover-overlay: rgba(255, 255, 255, 0.08);
+  --shadow-content-sheet: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .site-header {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .nav-list > li:not(:last-child)::after {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .theme-toggle {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .lang-switch-btn {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .lang-switch-btn img {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .content-frame {
+  background-color: transparent;
+  border: none;
+}
+
+[data-theme="dark"] .content-sheet {
+  background-color: #252525;
+  box-shadow: none;
+  border: none;
+}

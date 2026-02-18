@@ -1,0 +1,113 @@
+.page-case-detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 40%, var(--color-case-files-bg-light-start) 0%, var(--color-case-files-bg-light-end) 70%);
+}
+
+.page-case-detail .site-header {
+  background-color: var(--color-white);
+  box-shadow: var(--header-shadow);
+}
+
+.page-case-detail .nav-link,
+.page-case-detail .nav-list > li:not(:last-child)::after,
+.page-case-detail .lang-switch-btn {
+  color: var(--color-text);
+}
+
+.page-case-detail .nav-link:hover {
+  color: var(--color-light-blue-hover);
+}
+
+.page-case-detail .lang-switch-btn:hover {
+  background-color: var(--color-hover-overlay);
+}
+
+.page-case-detail .lang-switch-btn img {
+  filter: none;
+}
+
+.page-case-detail .theme-toggle {
+  color: var(--color-text);
+}
+
+.page-case-detail .theme-toggle:hover {
+  background-color: var(--color-hover-overlay);
+}
+
+.page-case-detail .lang-dropdown {
+  background-color: var(--color-white);
+  border-color: var(--color-border);
+}
+
+.page-case-detail .lang-dropdown button,
+.page-case-detail .lang-dropdown a {
+  color: var(--color-text);
+}
+
+.page-case-detail .lang-dropdown button:hover,
+.page-case-detail .lang-dropdown a:hover {
+  background-color: var(--color-hover-overlay);
+}
+
+.case-detail-main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  background: radial-gradient(ellipse at 50% 40%, var(--color-case-files-bg-light-start) 0%, var(--color-case-files-bg-light-end) 70%);
+}
+
+[data-theme="dark"] .page-case-detail {
+  background: radial-gradient(circle at center, var(--color-case-detail-gradient-start), var(--color-case-detail-gradient-end));
+}
+
+[data-theme="dark"] .page-case-detail .site-header {
+  background-color: var(--color-case-detail-bg);
+  box-shadow: var(--header-shadow-dark);
+}
+
+[data-theme="dark"] .page-case-detail .nav-link,
+[data-theme="dark"] .page-case-detail .nav-list > li:not(:last-child)::after,
+[data-theme="dark"] .page-case-detail .lang-switch-btn {
+  color: var(--color-case-detail-text);
+}
+
+[data-theme="dark"] .page-case-detail .nav-link:hover {
+  color: var(--color-case-detail-text-muted);
+}
+
+[data-theme="dark"] .page-case-detail .lang-switch-btn:hover {
+  background-color: var(--color-case-detail-hover);
+}
+
+[data-theme="dark"] .page-case-detail .lang-switch-btn img {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .page-case-detail .theme-toggle {
+  color: var(--color-case-detail-text);
+}
+
+[data-theme="dark"] .page-case-detail .theme-toggle:hover {
+  background-color: var(--color-case-detail-hover);
+}
+
+[data-theme="dark"] .page-case-detail .lang-dropdown {
+  background-color: var(--color-case-detail-dropdown-bg);
+  border-color: var(--color-case-detail-border);
+}
+
+[data-theme="dark"] .page-case-detail .lang-dropdown button,
+[data-theme="dark"] .page-case-detail .lang-dropdown a {
+  color: var(--color-case-detail-text);
+}
+
+[data-theme="dark"] .page-case-detail .lang-dropdown button:hover,
+[data-theme="dark"] .page-case-detail .lang-dropdown a:hover {
+  background-color: var(--color-case-detail-hover);
+}
+
+[data-theme="dark"] .case-detail-main {
+  background: radial-gradient(circle at center, var(--color-case-detail-gradient-start), var(--color-case-detail-gradient-end));
+}
