@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Records — Secure Access</title>
+  <title>Records - Secure Access</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
   <noscript><meta http-equiv="refresh" content="0;url=no-js.html"></noscript>
+  <script>
+    (function () {
+      try {
+        if (!sessionStorage.getItem('indexSeen')) {
+          sessionStorage.setItem('indexSeen', '1');
+          window.location.replace('case-detail.html?id=00-000A');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <div id="site-header-placeholder"></div>
